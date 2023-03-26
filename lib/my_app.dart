@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fl_chart_package/bar_chart/bar_chart.dart';
 import 'package:flutter_fl_chart_package/pie_chart/pie_chart_widget.dart';
 import '/line_chart/line_chart_widget.dart';
 import '/line_chart/price_points.dart';
@@ -47,7 +46,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
               onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const BarChartSample1()),
+                MaterialPageRoute(builder: (context) => const PieChartWidget()),
               ),
               child: const Text('Pie Chart'),
             ),
