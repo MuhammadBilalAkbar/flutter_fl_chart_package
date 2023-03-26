@@ -1,14 +1,14 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class PieChartWidget extends StatefulWidget {
-  const PieChartWidget({Key? key}) : super(key: key);
+class PieChartPage extends StatefulWidget {
+  const PieChartPage({Key? key}) : super(key: key);
 
   @override
-  State<PieChartWidget> createState() => _PieChartWidgetState();
+  State<PieChartPage> createState() => _PieChartPageState();
 }
 
-class _PieChartWidgetState extends State<PieChartWidget> {
+class _PieChartPageState extends State<PieChartPage> {
   int touchedIndex = -1;
 
   @override

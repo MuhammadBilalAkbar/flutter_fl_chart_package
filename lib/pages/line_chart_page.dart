@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 
-import 'price_points.dart';
 
-class LineChartWidget extends StatelessWidget {
-  const LineChartWidget(this.points, {Key? key}) : super(key: key);
-
-  final List<PricePoint> points;
+class LineChartPage extends StatelessWidget {
+  const LineChartPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -19,11 +16,6 @@ class LineChartWidget extends StatelessWidget {
             LineChartData(
               lineBarsData: [
                 LineChartBarData(
-                  // spots: points
-                  //     .map(
-                  //       (points) => FlSpot(points.x, points.y),
-                  //     )
-                  //     .toList(),
                   spots: const [
                     FlSpot(0, 3),
                     FlSpot(2.6, 2),
@@ -47,12 +39,6 @@ class LineChartWidget extends StatelessWidget {
               ],
               // Restrict x axis using minX and maxX. minX is starting point of x axis and maxX is ending point of x axis.
               // Restrict y axis using minY and maxY.  minY is starting point of y axis and maxY is ending point of y axis.
-              /// For PricePoints
-              // minX: 0,
-              // maxX: 6,
-              // minY: 2,
-              // maxY: 11,
-              /// For const FlSpot List
               minX: 0,
               maxX: 11,
               minY: 2,
