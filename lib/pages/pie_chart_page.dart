@@ -23,89 +23,22 @@ class _PieChartPageState extends State<PieChartPage> {
             color: Colors.red,
             child: PieChart(
               PieChartData(
-                sections: showingSections(),
-                sectionsSpace: 2,
-                centerSpaceColor: Colors.orange,
-                centerSpaceRadius: 110,
+                centerSpaceRadius: 5,
                 borderData: FlBorderData(show: false),
-                pieTouchData: PieTouchData(
-                  touchCallback: (event, pieTouchResponse) {
-                    setState(() {
-                      if (!event.isInterestedForInteractions ||
-                          pieTouchResponse == null ||
-                          pieTouchResponse.touchedSection == null) {
-                        touchedIndex = -1;
-                        return;
-                      }
-                      touchedIndex =
-                          pieTouchResponse.touchedSection!.touchedSectionIndex;
-                    });
-                  },
-                ),
+                sectionsSpace: 2,
+                sections: [
+                  PieChartSectionData(
+                      value: 35, color: Colors.purple, radius: 100),
+                  PieChartSectionData(
+                      value: 40, color: Colors.amber, radius: 100),
+                  PieChartSectionData(
+                      value: 55, color: Colors.green, radius: 100),
+                  PieChartSectionData(
+                      value: 70, color: Colors.orange, radius: 100),
+                ],
               ),
             ),
           ),
         ),
       );
-
-  List<PieChartSectionData> showingSections() {
-    return List.generate(4, (i) {
-      final isTouched = i == touchedIndex;
-      final fontSize = isTouched ? 25.0 : 16.0;
-      final radius = isTouched ? 60.0 : 50.0;
-      const shadows = [Shadow(color: Colors.black, blurRadius: 2)];
-      switch (i) {
-        case 0:
-          return PieChartSectionData(
-            color: Colors.blue,
-            value: 40,
-            title: '40%',
-            radius: radius,
-            titleStyle: TextStyle(
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-              shadows: shadows,
-            ),
-          );
-        case 1:
-          return PieChartSectionData(
-            color: Colors.yellow,
-            value: 30,
-            title: '30%',
-            radius: radius,
-            titleStyle: TextStyle(
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-              shadows: shadows,
-            ),
-          );
-        case 2:
-          return PieChartSectionData(
-            color: Colors.purple,
-            value: 15,
-            title: '15%',
-            radius: radius,
-            titleStyle: TextStyle(
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-              shadows: shadows,
-            ),
-          );
-        case 3:
-          return PieChartSectionData(
-            color: Colors.green,
-            value: 15,
-            title: '15%',
-            radius: radius,
-            titleStyle: TextStyle(
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-              shadows: shadows,
-            ),
-          );
-        default:
-          throw Error();
-      }
-    });
-  }
 }

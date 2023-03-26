@@ -35,10 +35,20 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) =>  BarChartPage(),
+                    builder: (context) => const PieChartPage(),
                   ),
                 ),
                 child: const Text('Pie Chart'),
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const BarChartPage(),
+                  ),
+                ),
+                child: const Text('Bar Chart'),
               ),
             ],
           ),
