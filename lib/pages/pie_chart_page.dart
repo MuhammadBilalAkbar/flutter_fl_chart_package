@@ -27,14 +27,7 @@ class _PieChartPageState extends State<PieChartPage> {
                 sectionsSpace: 2,
                 centerSpaceColor: Colors.orange,
                 centerSpaceRadius: 110,
-                borderData: FlBorderData(
-                  show: true,
-                  border: Border.all(color: Colors.blue, width: 5),
-                  // border: const Border(
-                  //   left: BorderSide(color: Colors.blue, width: 3),
-                  //   bottom: BorderSide(color: Colors.blue, width: 3),
-                  // ),
-                ),
+                borderData: FlBorderData(show: false),
                 pieTouchData: PieTouchData(
                   touchCallback: (event, pieTouchResponse) {
                     setState(() {

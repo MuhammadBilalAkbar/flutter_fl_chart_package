@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fl_chart_package/pages/bar_chart_page.dart';
 
 import 'line_chart_page.dart';
 import 'pie_chart_page.dart';
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const PieChartPage(),
+                    builder: (context) =>  BarChartPage(),
                   ),
                 ),
                 child: const Text('Pie Chart'),

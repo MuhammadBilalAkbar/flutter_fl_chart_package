@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 
-
 class LineChartPage extends StatelessWidget {
   const LineChartPage({Key? key}) : super(key: key);
 
@@ -70,15 +69,13 @@ class LineChartPage extends StatelessWidget {
                     },
                   ),
                 ),
-                // topTitles: AxisTitles(),
                 leftTitles: AxisTitles(
                   axisNameWidget: const Text('Y axis'),
                   sideTitles: SideTitles(
                     showTitles: true,
-                    // getTitlesWidget: (value, titleMeta) {}
+                    reservedSize: 40,
                   ),
                 ),
-                // rightTitles: AxisTitles(),
               ),
               // gridData to customize data inside of border
               gridData: FlGridData(
@@ -103,8 +100,6 @@ class LineChartPage extends StatelessWidget {
                 ),
               ),
             ),
-            swapAnimationDuration: const Duration(milliseconds: 150),
-            swapAnimationCurve: Curves.linear,
           ),
         ),
       );
