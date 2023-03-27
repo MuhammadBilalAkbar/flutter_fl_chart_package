@@ -138,7 +138,8 @@
    package in your project's pubspec.yaml file.
 2. For this video, `home_page.dart` is main page of project.
 3. `line_chart_page.dart` contains Bar Chart in it.
-   <br/>Some properties of **BarChart** which are used in this project are following:
+   ![Screenshot](output/FlLineChart.PNG)
+   Some properties of **BarChart** which are used in this project are following:
 
 | PropName        | Description                                                                                   |
 |:----------------|:----------------------------------------------------------------------------------------------|
@@ -165,7 +166,8 @@
 | dotData      | data of dots `FlDotData`                                                     |
 
 4. `pie_chart_page.dart` contains Pie Chart in it.
-   <br/> Properties of **PieChartData**:
+   ![Screenshot](output/FlPieChart.PNG)
+   Properties of **PieChartData**:
 
 | PropName          | Description                                                                                                     |
 |:------------------|:----------------------------------------------------------------------------------------------------------------|
@@ -189,7 +191,8 @@
 | borderSide                    | border around the section                                                             |
 
 5. `bar_chart_page.dart` contains Bar Chart in it.
-   <br/> Properties of **BarChartData**:
+   ![Screenshot](output/FlBarChart.PNG)
+   Properties of **BarChartData**:
 
 | PropName         | Description                                                                                      |
 |:-----------------|:-------------------------------------------------------------------------------------------------|
