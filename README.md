@@ -166,7 +166,7 @@
 | dotData      | data of dots `FlDotData`                                                     |
 
 4. `pie_chart_page.dart` contains Pie Chart in it.
-   <br/>![Screenshot](output/FlPieChart.PNG)
+   <br/><br/>![Screenshot](output/FlPieChart.PNG)
    <br/>Properties of **PieChartData**:
 
 | PropName          | Description                                                                                                     |
@@ -191,7 +191,7 @@
 | borderSide                    | border around the section                                                             |
 
 5. `bar_chart_page.dart` contains Bar Chart in it.
-   <br/>![Screenshot](output/FlBarChart.PNG)
+   <br/><br/>![Screenshot](output/FlBarChart.PNG)
    <br/>Properties of **BarChartData**:
 
 | PropName         | Description                                                                                      |
