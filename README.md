@@ -138,7 +138,7 @@
    package in your project's pubspec.yaml file.
 2. For this video, `home_page.dart` is main page of project.
 3. `line_chart_page.dart` contains Bar Chart in it.
-   <br/>![Screenshot](output/FlLineChart.PNG)
+   <br/><br/>![Screenshot](output/FlLineChart.PNG)
    <br/>Some properties of **BarChart** which are used in this project are following:
 
 | PropName        | Description                                                                                   |
