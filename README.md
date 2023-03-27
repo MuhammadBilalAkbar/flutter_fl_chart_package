@@ -140,94 +140,76 @@
 3. `line_chart_page.dart` contains Bar Chart in it.
    <br/>Some properties of **BarChart** which are used in this project are following:
 
-| PropName        | Description                                                                                                                 | default value     |
-|:----------------|:----------------------------------------------------------------------------------------------------------------------------|:------------------|
-| lineBarsData    | list of [LineChartBarData ](#LineChartBarData ) to show the chart's lines, they stack and can be drawn on top of each other | []                |
-| betweenBarsData | list of [BetweenBarsData](#BetweenBarsData ) to fill the area between 2 chart lines                                         | []                |
-| titlesData      | check the [FlTitlesData](base_chart.md#FlTitlesData)                                                                        | FlTitlesData()    |
-| axisTitleData   | check the [FlAxisTitleData](base_chart.md#FlAxisTitleData)                                                                  | FlAxisTitleData() |
-| gridData        | check the [FlGridData](base_chart.md#FlGridData)                                                                            | FlGridData()      |
-| borderData      | check the [FlBorderData](base_chart.md#FlBorderData)                                                                        | FlBorderData()    |
-| minX            | gets minimum x of x axis, if null, value will read from the input lineBars                                                  | null              |
-| maxX            | gets maximum x of x axis, if null, value will read from the input lineBars                                                  | null              |
-| minY            | gets minimum y of y axis, if null, value will read from the input lineBars                                                  | null              |
-| maxY            | gets maximum y of y axis, if null, value will read from the input lineBars                                                  | null              |
-| backgroundColor | a background color which is drawn behind th chart                                                                           | null              |
+| PropName        | Description                                                                                   |
+|:----------------|:----------------------------------------------------------------------------------------------|
+| lineBarsData    | list of `LineChartBarData` to show the chart's lines, these can be drawn on top of each other |
+| betweenBarsData | list of `BetweenBarsData` to fill the area between 2 chart lines                              |
+| titlesData      | data of titles using `FlTitlesData`                                                           |
+| axisTitleData   | data of axis titles using `FlAxisTitleData`                                                   |
+| gridData        | data of grid within the borders using `FlGridData`                                            |
+| borderData      | data of border using `FlBorderData`                                                           |
+| minX            | starting point of x axis                                                                      |
+| maxX            | ending point of x axis                                                                        |
+| minY            | starting point of y axis                                                                      |
+| maxY            | ending point of y axis                                                                        |
+| backgroundColor | a background color which is drawn behind th chart                                             |
 
 <br/> Properties of **LineChartBarData**:
 
-| PropName     | Description                                                                                 | default value                             |
-|:-------------|:--------------------------------------------------------------------------------------------|:------------------------------------------|
-| spots        | list of [FlSpot](base_chart.md#FlSpot)'s x and y coordinates that the line go through it    | []                                        |
-| color        | color of the line                                                                           | [Colors.redAccent]                        |
-| barWidth     | gets the stroke width of the line bar                                                       | 2.0                                       |
-| isCurved     | curves the corners of the line on the spot's positions                                      | false                                     |
-| belowBarData | check the [BarAreaData](#BarAreaData)                                                       | BarAreaData                               |
-| aboveBarData | check the [BarAreaData](#BarAreaData)                                                       | BarAreaData                               |
-| dotData      | check the [FlDotData](#FlDotData)                                                           | FlDotData()                               |
-
-<br/> Properties of **BetweenBarsData**:
-
-| PropName   | Description                                                                                                                                                                                                                                                                        | default value     |
-|:-----------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------|
-| fromIndex  | index of the first LineChartBarData inside LineChartData (zero-based index)                                                                                                                                                                                                        | required          |
-| toIndex    | index of the second LineChartBarData inside LineChartData (zero-based index)                                                                                                                                                                                                       | required          |
-| color      | color of the area                                                                                                                                                                                                                                                                  | [Colors.blueGrey] |
-| gradient   | You can use any [Gradient](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) here. such as [LinearGradient](https://api.flutter.dev/flutter/painting/LinearGradient-class.html) or [RadialGradient](https://api.flutter.dev/flutter/painting/RadialGradient-class.html) | null              |
+| PropName     | Description                                                                  |
+|:-------------|:-----------------------------------------------------------------------------|
+| spots        | list of `FlSpot`'s (or dots) x and y coordinates that the line go through it |
+| color        | color of the line                                                            |
+| barWidth     | stroke width of the line bar                                                 |
+| isCurved     | show curves instead of line between dots or spots                            |
+| dotData      | data of dots `FlDotData`                                                     |
 
 4. `pie_chart_page.dart` contains Pie Chart in it.
    <br/> Properties of **PieChartData**:
 
-| PropName          | Description                                                                                                                | default value      |
-|:------------------|:---------------------------------------------------------------------------------------------------------------------------|:-------------------|
-| sections          | list of [PieChartSectionData ](#PieChartSectionData) that is shown on the pie chart                                        | []                 |
-| centerSpaceRadius | free space in the middle of the PieChart, set `double.infinity` if you want it to be calculated according to the view size | double.nan         |
-| centerSpaceColor  | colors the free space in the middle of the PieChart                                                                        | Colors.transparent |
-| sectionsSpace     | space between the sections (margin of them)                                                                                | 2                  |
-| startDegreeOffset | degree offset of the sections around the pie chart, should be between 0 and 360                                            | 0                  |
-| pieTouchData      | [PieTouchData](#PieTouchData) holds the touch interactivity details                                                        | PieTouchData()     |
-| borderData        | shows a border around the chart, check the [FlBorderData](base_chart.md#FlBorderData)                                      | FlBorderData()     |
+| PropName          | Description                                                                                                     |
+|:------------------|:----------------------------------------------------------------------------------------------------------------|
+| sections          | list of `PieChartSectionData` that is shown on the pie chart                                                    |
+| centerSpaceRadius | free space in the middle of the PieChart                                                                        |
+| centerSpaceColor  | color of free space in the middle of the PieChart                                                               |
+| sectionsSpace     | space between the sections of PieChart                                                                          |
+| pieTouchData      | `PieTouchData` holds the touch interactivity details like to show as popup when user touches a specific section |
+| borderData        | data of border around the chart using `FlBorderData`                                                            |
 
 <br/> Properties of **PieChartSectionData**:
 
-| PropName                      | Description                                                                                                                                                                    | default value                                                             |
-|:------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
-| value                         | value is the weight of each section, for example if all values is 25, and we have 4 section, then the sum is 100 and each section takes 1/4 of the whole circle (360/4) degree | 10                                                                        |
-| color                         | colors the section                                                                                                                                                             | Colors.red                                                                |
-| radius                        | the width radius of each section                                                                                                                                               | 40                                                                        |
-| showTitle                     | determines to show or hide the titles on each section                                                                                                                          | true                                                                      |
-| titleStyle                    | TextStyle of the titles                                                                                                                                                        | TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold) |
-| title                         | title of the section                                                                                                                                                           | value                                                                     |
-| borderSide                    | Defines border stroke around the section                                                                                                                                       | BorderSide(width: 0)                                                      |
-| badgeWidget                   | badge component of the section                                                                                                                                                 | null                                                                      |
-| titlePositionPercentageOffset | the place of the title in the section, this field should be between 0 and 1                                                                                                    | 0.5                                                                       |
-| badgePositionPercentageOffset | the place of the badge component in the section, this field should be between 0 and 1                                                                                          | 0.5                                                                       |
+| PropName                      | Description                                                                           |
+|:------------------------------|:--------------------------------------------------------------------------------------|
+| value                         | value is the weight of each section, total weight of PieChart is 100.                 |
+| color                         | colors the section                                                                    |
+| radius                        | the width radius of each section                                                      |
+| showTitle                     | true to show or false to hide the titles on each section                              |
+| titleStyle                    | TextStyle of the titles                                                               |
+| title                         | title of the section                                                                  |
+| borderSide                    | border around the section                                                             |
 
 5. `bar_chart_page.dart` contains Bar Chart in it.
    <br/> Properties of **BarChartData**:
 
-| PropName         | Description                                                                                                                                                                                                                               | default value                  |
-|:-----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
-| barGroups        | list of [BarChartGroupData ](#BarChartGroupData) to show the bar lines together, you can provide one item per group to show normal bar chart                                                                                              | []                             |
-| groupsSpace      | space between groups, it applies only when the [alignment](#BarChartAlignment) is `Alignment.center`,                                                                                                                                     | 16                             |
-| alignment        | a [BarChartAlignment](#BarChartAlignment) that determines the alignment of the barGroups, inspired by [Flutter MainAxisAlignment](https://docs.flutter.io/flutter/rendering/MainAxisAlignment-class.html)                                 | BarChartAlignment.spaceBetween |
-| titlesData       | check the [FlTitlesData](base_chart.md#FlTitlesData)                                                                                                                                                                                      | FlTitlesData()                 |
-| axisTitleData    | check the [FlAxisTitleData](base_chart.md#FlAxisTitleData)                                                                                                                                                                                | FlAxisTitleData()              |
-| rangeAnnotations | show range annotations behind the chart, check [RangeAnnotations](base_chart.md#RangeAnnotations)                                                                                                                                         | RangeAnnotations()             |
-| backgroundColor  | a background color which is drawn behind the chart                                                                                                                                                                                        | null                           |
-| barTouchData     | [BarTouchData](#BarTouchData) holds the touch interactivity details                                                                                                                                                                       | BarTouchData()                 |
-| gridData         | check the [FlGridData](base_chart.md#FlGridData)                                                                                                                                                                                          | FlGridData()                   |
-| borderData       | check the [FlBorderData](base_chart.md#FlBorderData)                                                                                                                                                                                      | FlBorderData()                 |
-| maxY             | gets maximum y of y axis, if null, value will be read from the input barGroups                                                                                                                                                            | null                           |
-| minY             | gets minimum y of y axis, if null, value will be read from the input barGroups                                                                                                                                                            | null                           |
-| baselineY        | defines the baseline of y-axis                                                                                                                                                                                                            | 0                              |
-| extraLinesData   | allows extra horizontal lines to be drawn on the chart. Vertical lines are ignored when used with BarChartData, please see [#1149](https://github.com/imaNNeo/fl_chart/issues/1149), check [ExtraLinesData](base_chart.md#ExtraLinesData) | ExtraLinesData()               |
+| PropName         | Description                                                                                      |
+|:-----------------|:-------------------------------------------------------------------------------------------------|
+| barGroups        | list of `BarChartGroupData` to show the bar lines together                                       |
+| groupsSpace      | space between groups, it applies only when `alignment(BarChartAlignment)` is `Alignment.center`, |
+| alignment        | alignment of the barGroups using `BarChartAlignment`                                             |
+| titlesData       | data of titles using `FlTitlesData`                                                              |
+| axisTitleData    | data of axis titles using `FlAxisTitleData`                                                      |
+| backgroundColor  | a background color which is drawn behind the chart                                               |
+| barTouchData     | `BarTouchData` holds the touch interactivity details                                             |
+| gridData         | data of grid inside the border using `FlGridData`                                                |
+| borderData       | data of border using `FlBorderData`                                                              |
+| maxY             | gets maximum y of y axis                                                                         |
+| minY             | gets minimum y of y axis                                                                         |
 
 <br/> Properties of **BarChartGroupData**:
 
-| PropName                 | Description                                                     | default value |
-|:-------------------------|:----------------------------------------------------------------|:--------------|
-| x                        | x position of the group on horizontal axis                      | null          |
-| barRods                  | list of [BarChartRodData](#BarChartRodData) that are a bar line | []            |
-| barsSpace                | the space between barRods of the group                          | 2             |
-| showingTooltipIndicators | indexes of barRods to show the tooltip on top of them           | []            |
+| PropName                 | Description                                           |
+|:-------------------------|:------------------------------------------------------|
+| x                        | x position of the group on horizontal axis            |
+| barRods                  | list of `BarChartRodData` that are a bar line         |
+| barsSpace                | the space between barRods of the group                |
+| showingTooltipIndicators | indexes of barRods to show the tooltip on top of them |
